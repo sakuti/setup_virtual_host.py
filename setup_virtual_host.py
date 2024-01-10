@@ -20,8 +20,8 @@ def create_vhost(domain, document_root, proxy=False, proxy_port=None):
         vhost_config += f"""
         ProxyRequests Off
         ProxyPreserveHost On
-        ProxyPass / http://localhost:{proxy_port}/
-        ProxyPassReverse / http://localhost:{proxy_port}/
+        ProxyPass / http://127.0.0.1:{proxy_port}/
+        ProxyPassReverse / http://127.0.0.1:{proxy_port}/
         """
 
     vhost_config += """
